@@ -25,6 +25,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader("Allow", "GET, PUT");
     return res.status(405).json({ error: "Method not allowed" });
   } catch (err) {
+    console.error("/api/admin/profile error:", err);
     return res.status(500).json({ error: err instanceof Error ? err.message : "Server error." });
   }
 }
