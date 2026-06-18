@@ -1,0 +1,35 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Livestock Disease Detection Using Hybrid Quantum-Classical Neural Networks",
+    "description": "Developed a Hybrid Quantum-Classical Neural Network (HQCNN) architecture for livestock disease classification using image datasets. The system combines deep learning-based feature extraction with quantum computing techniques to improve classification performance.",
+    "techStack": ["Python", "Qiskit", "PyTorch", "OpenCV", "Scikit-Learn", "Streamlit"],
+    "githubUrl": "https://github.com/Bharathlax-2005",
+    "demoUrl": "",
+    "imageUrl": "",
+    "featured": true,
+    "highlights": ["Quantum Feature Encoding", "Multi-class Image Recognition", "Hybrid AI Architecture"]
+  },
+  {
+    "id": "proj-2",
+    "title": "Personalized Nutrition Health Optimizer",
+    "description": "Designed and developed an AI-powered recommendation system that provides personalized dietary suggestions based on diseases, deficiencies, and nutritional requirements.",
+    "techStack": ["Python", "Machine Learning", "Pandas", "NumPy", "Streamlit"],
+    "githubUrl": "https://github.com/Bharathlax-2005",
+    "demoUrl": "",
+    "imageUrl": "",
+    "featured": true,
+    "highlights": ["Recommendation Systems", "Healthcare Analytics", "Personalized AI"]
+  },
+  {
+    "id": "proj-3",
+    "title": "Business Analytics Dashboard",
+    "description": "Created an interactive business analytics dashboard to visualize KPIs, business metrics, trends, and performance indicators for better decision-making.",
+    "techStack": ["Power BI", "SQL", "Excel"],
+    "githubUrl": "",
+    "demoUrl": "",
+    "imageUrl": "",
+    "featured": true,
+    "highlights": ["KPI Monitoring", "Interactive Dashboards", "Trend Analysis"]
+  }
+]

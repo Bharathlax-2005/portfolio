@@ -1,0 +1,152 @@
+{
+  "profile": {
+    "name": "Bharath Kumar",
+    "eyebrow": "AI & Data Science Graduate",
+    "headline": "Transforming Data into Actionable Insights",
+    "tagline": "Passionate about Data Analytics, Business Intelligence, Artificial Intelligence, and Machine Learning. I enjoy solving real-world problems through data-driven approaches and building intelligent systems that create meaningful impact.",
+    "bio": "I am an Artificial Intelligence & Data Science graduate with a strong passion for Data Analytics, Business Intelligence, Artificial Intelligence, and emerging technologies. My journey in technology has been driven by curiosity, continuous learning, and a desire to solve real-world challenges through data and intelligent systems.\n\nI enjoy working with Python, SQL, Power BI, Machine Learning, and modern analytical tools to uncover insights, build predictive solutions, and support data-driven decision-making. I continuously explore new technologies and work on projects that combine innovation, analytics, and practical business impact.\n\nAs a fresher, I am actively seeking opportunities where I can contribute my analytical thinking, technical skills, and enthusiasm for learning while growing as a Data Analyst, Business Analyst, AI/ML Engineer, or Data Science professional.",
+    "location": "Tamil Nadu, India",
+    "avatarUrl": "/images/bharath-profile.png",
+    "resumeUrl": "/resume.pdf",
+    "motto": "Turning Data into Insights and Ideas into Intelligent Solutions."
+  },
+  "personalInfo": {
+    "fullName": "Bharath Kumar",
+    "currentStatus": "AI & Data Science Graduate",
+    "careerLevel": "Fresher",
+    "location": "Tamil Nadu, India",
+    "openToWork": true,
+    "preferredRoles": ["Data Analyst", "Business Analyst", "Data Science Associate", "AI/ML Engineer", "Software Developer"]
+  },
+  "careerObjective": "To build a successful career in Data Analytics, Artificial Intelligence, and Business Intelligence by applying analytical thinking, technical expertise, and problem-solving skills to create impactful solutions and contribute to organizational growth.",
+  "socials": {
+    "email": "",
+    "github": "https://github.com/Bharathlax-2005",
+    "linkedin": "https://www.linkedin.com/in/bharath-kumar-bksquare/",
+    "twitter": ""
+  },
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": ["Python", "SQL", "Java (Basic)"],
+      "icon": "code"
+    },
+    {
+      "category": "Data Analytics",
+      "items": ["Data Cleaning", "EDA", "Data Visualization", "Dashboard Development", "Reporting", "Business Insights"],
+      "icon": "bar-chart"
+    },
+    {
+      "category": "Business Intelligence",
+      "items": ["Power BI", "Tableau", "Microsoft Excel"],
+      "icon": "pie-chart"
+    },
+    {
+      "category": "Data Science Libraries",
+      "items": ["Pandas", "NumPy", "Scikit-Learn"],
+      "icon": "library"
+    },
+    {
+      "category": "AI & Machine Learning",
+      "items": ["Machine Learning", "Deep Learning", "Quantum ML", "Model Training", "Feature Engineering"],
+      "icon": "brain"
+    },
+    {
+      "category": "Database Technologies",
+      "items": ["MySQL"],
+      "icon": "database"
+    },
+    {
+      "category": "Development Tools",
+      "items": ["Git", "GitHub", "VS Code", "Jupyter Notebook"],
+      "icon": "wrench"
+    },
+    {
+      "category": "Soft Skills",
+      "items": ["Problem Solving", "Critical Thinking", "Communication", "Team Collaboration", "Data Storytelling"],
+      "icon": "users"
+    }
+  ],
+  "areasOfInterest": [
+    "Data Analytics",
+    "Business Intelligence",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Quantum Machine Learning",
+    "Data Visualization",
+    "Predictive Analytics",
+    "Intelligent Systems"
+  ],
+  "experience": [],
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "B.Tech — Artificial Intelligence & Data Science",
+      "degree": "Bachelor of Technology",
+      "startDate": "2022",
+      "endDate": "2026",
+      "detail": "Graduated"
+    }
+  ],
+  "learningJourney": [
+    {
+      "stage": "Foundation",
+      "description": "Started learning programming fundamentals. Developed interest in data and technology.",
+      "icon": "rocket"
+    },
+    {
+      "stage": "Analytics",
+      "description": "Learned Python and SQL. Practiced data cleaning and analysis. Built analytical thinking skills.",
+      "icon": "trending-up"
+    },
+    {
+      "stage": "Visualization",
+      "description": "Learned Power BI and Tableau. Created dashboards and reports. Developed business insight generation skills.",
+      "icon": "eye"
+    },
+    {
+      "stage": "AI & Machine Learning",
+      "description": "Explored Machine Learning concepts. Built predictive models. Worked on AI-based projects.",
+      "icon": "cpu"
+    },
+    {
+      "stage": "Advanced Learning",
+      "description": "Explored Quantum Machine Learning. Developed Hybrid Quantum-Classical solutions. Researched intelligent systems.",
+      "icon": "zap"
+    }
+  ],
+  "currentFocus": [
+    "Advanced Python",
+    "SQL Optimization",
+    "Data Modeling",
+    "Business Analytics",
+    "Power BI",
+    "Machine Learning",
+    "AI Applications",
+    "Data Visualization"
+  ],
+  "strengths": [
+    "Strong Analytical Mindset",
+    "Data-Driven Thinking",
+    "Continuous Learning Attitude",
+    "Problem-Solving Skills",
+    "Curiosity for Emerging Tech",
+    "Strong Interest in AI & Analytics",
+    "Adaptability",
+    "Team Collaboration"
+  ],
+  "careerGoals": {
+    "shortTerm": [
+      "Begin a successful career in Data Analytics",
+      "Gain practical industry experience",
+      "Strengthen technical expertise",
+      "Contribute to impactful projects"
+    ],
+    "longTerm": [
+      "Become a highly skilled Data Professional",
+      "Lead Data-Driven Decision Making",
+      "Build AI-Powered Solutions",
+      "Contribute to innovative technology products"
+    ]
+  }
+}
