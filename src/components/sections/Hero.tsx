@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Container from "../layout/Container";
 import { LinkButton } from "../ui/Button";
 import content from "../../data/content.json";
-import { ArrowDown, Github, Linkedin, Sparkles } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Sparkles, Mail } from "lucide-react";
 
 const variants = {
   hidden: { opacity: 0, y: 24 },
@@ -13,7 +13,7 @@ const EASE_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
-  const { profile } = content;
+  const { profile, socials } = content;
 
   const transition = (delay: number) =>
     shouldReduceMotion ? { duration: 0 } : { duration: 0.7, delay, ease: EASE_OUT };
@@ -125,24 +125,37 @@ export default function Hero() {
               transition={transition(0.5)}
               className="mt-8 flex items-center justify-center md:justify-start gap-4"
             >
-              <a
-                href="https://www.linkedin.com/in/bharath-kumar-bksquare/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-muted hover:text-signal transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://github.com/Bharathlax-2005"
-                target="_blank"
-                rel="noreferrer"
-                className="text-muted hover:text-signal transition-all duration-300 hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
+              {socials.linkedin && (
+                <a
+                  href={socials.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-muted hover:text-signal transition-all duration-300 hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+              )}
+              {socials.github && (
+                <a
+                  href={socials.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-muted hover:text-signal transition-all duration-300 hover:scale-110"
+                  aria-label="GitHub"
+                >
+                  <Github size={20} />
+                </a>
+              )}
+              {socials.email && (
+                <a
+                  href={`mailto:${socials.email}`}
+                  className="text-muted hover:text-signal transition-all duration-300 hover:scale-110"
+                  aria-label="Email"
+                >
+                  <Mail size={20} />
+                </a>
+              )}
               <span className="w-px h-5 bg-line/50" />
               <span className="text-xs font-mono text-muted/60">Tamil Nadu, India</span>
             </motion.div>

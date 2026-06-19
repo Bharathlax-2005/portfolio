@@ -20,7 +20,7 @@
   },
   "careerObjective": "To build a successful career in Data Analytics, Artificial Intelligence, and Business Intelligence by applying analytical thinking, technical expertise, and problem-solving skills to create impactful solutions and contribute to organizational growth.",
   "socials": {
-    "email": "",
+    "email": "bharathlax2005@gmail.com",
     "github": "https://github.com/Bharathlax-2005",
     "linkedin": "https://www.linkedin.com/in/bharath-kumar-bksquare/",
     "twitter": ""
@@ -81,8 +81,8 @@
   "education": [
     {
       "id": "edu-1",
-      "institution": "B.Tech — Artificial Intelligence & Data Science",
-      "degree": "Bachelor of Technology",
+      "institution": "Karunya Institute of Technology and Sciences",
+      "degree": "B.Tech — Artificial Intelligence & Data Science",
       "startDate": "2022",
       "endDate": "2026",
       "detail": "Graduated"
@@ -90,29 +90,41 @@
   ],
   "learningJourney": [
     {
-      "stage": "Foundation",
-      "description": "Started learning programming fundamentals. Developed interest in data and technology.",
+      "timeline": "2023",
+      "title": "Data Science & Machine Learning Intern | YBI Foundation",
+      "description": "Built a strong foundation in data analysis, machine learning concepts, and predictive modeling through hands-on projects and real-world datasets.",
       "icon": "rocket"
     },
     {
-      "stage": "Analytics",
-      "description": "Learned Python and SQL. Practiced data cleaning and analysis. Built analytical thinking skills.",
-      "icon": "trending-up"
+      "timeline": "2024",
+      "title": "Business Analyst Intern | SmartInternz",
+      "description": "Developed business intelligence and analytical skills using Qlik, transforming data into actionable insights and dashboards.",
+      "icon": "bar-chart"
     },
     {
-      "stage": "Visualization",
-      "description": "Learned Power BI and Tableau. Created dashboards and reports. Developed business insight generation skills.",
-      "icon": "eye"
+      "timeline": "2024",
+      "title": "Technical Project Manager | GDSC Karunya",
+      "description": "Led technical initiatives, coordinated teams, and managed project execution while driving innovation and collaboration.",
+      "icon": "briefcase"
     },
     {
-      "stage": "AI & Machine Learning",
-      "description": "Explored Machine Learning concepts. Built predictive models. Worked on AI-based projects.",
-      "icon": "cpu"
+      "timeline": "2024",
+      "title": "Networking Intern | Cisco Networking Academy",
+      "description": "Gained practical knowledge of networking fundamentals, network infrastructure, routing, switching, and cybersecurity concepts.",
+      "icon": "network"
     },
     {
-      "stage": "Advanced Learning",
-      "description": "Explored Quantum Machine Learning. Developed Hybrid Quantum-Classical solutions. Researched intelligent systems.",
-      "icon": "zap"
+      "timeline": "2025",
+      "title": "ServiceNow Virtual Intern | SmartInternz",
+      "description": "Learned enterprise workflow automation, IT service management (ITSM), and digital transformation using the ServiceNow platform.",
+      "icon": "layers"
+    },
+    {
+      "timeline": "2023–2025",
+      "title": "Journey Summary",
+      "description": "From Data Science and Analytics to Business Intelligence, Project Leadership, Networking, and Enterprise Solutions, continuously expanding technical expertise and industry exposure through internships and leadership experiences.",
+      "icon": "map",
+      "link": "https://www.linkedin.com/in/bharath-kumar-bksquare/details/experience/"
     }
   ],
   "currentFocus": [

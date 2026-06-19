@@ -1,7 +1,7 @@
 import Section from "../layout/Section";
 import Reveal from "../ui/Reveal";
 import content from "../../data/content.json";
-import { Rocket, TrendingUp, Eye, Cpu, Zap, GraduationCap, Target, ArrowRight } from "lucide-react";
+import { Rocket, TrendingUp, Eye, Cpu, Zap, GraduationCap, Target, ArrowRight, ExternalLink } from "lucide-react";
 import { ReactNode } from "react";
 
 const journeyIcons: Record<string, ReactNode> = {
@@ -81,15 +81,33 @@ export default function Experience() {
                       </div>
                       {/* Content */}
                       <div className="glass-card rounded-xl p-5 flex-1 group">
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className={`md:hidden w-8 h-8 rounded-lg ${color.bg} flex items-center justify-center ${color.text}`}>
-                            {journeyIcons[stage.icon] || <Zap size={16} />}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-2">
+                          <div className="flex items-center gap-2">
+                            <div className={`md:hidden w-8 h-8 rounded-lg ${color.bg} flex items-center justify-center ${color.text}`}>
+                              {journeyIcons[stage.icon] || <Zap size={16} />}
+                            </div>
+                            <h4 className="font-display text-base font-semibold text-ink group-hover:text-signal transition-colors duration-300">
+                              {stage.title}
+                            </h4>
                           </div>
-                          <h4 className="font-display text-base font-semibold text-ink group-hover:text-signal transition-colors duration-300">
-                            {stage.stage} Stage
-                          </h4>
+                          {stage.timeline && (
+                            <span className="font-mono text-xs text-muted uppercase tracking-[0.2em]">
+                              {stage.timeline}
+                            </span>
+                          )}
                         </div>
                         <p className="text-sm text-muted leading-relaxed">{stage.description}</p>
+                        {stage.link && (
+                          <a
+                            href={stage.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-4 inline-flex items-center gap-2 text-signal font-mono text-sm hover:text-accent transition-colors duration-200"
+                          >
+                            View LinkedIn Experience
+                            <ExternalLink size={14} />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </Reveal>

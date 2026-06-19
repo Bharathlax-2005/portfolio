@@ -1,26 +1,114 @@
 [
   {
     "id": "cert-1",
-    "title": "Deep Learning Specialization",
-    "issuer": "DeepLearning.AI",
-    "date": "2025-04",
-    "credentialUrl": "",
+    "title": "Google Data Analytics Professional Certificate",
+    "issuer": "Google (Coursera)",
+    "date": "N/A",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/professional-cert/HE7VC28YZXZA",
     "imageUrl": ""
   },
   {
     "id": "cert-2",
-    "title": "AWS Certified Machine Learning – Specialty",
-    "issuer": "Amazon Web Services",
-    "date": "2025-08",
-    "credentialUrl": "",
+    "title": "MongoDB Java Developer Path",
+    "issuer": "MongoDB",
+    "date": "Oct 2025",
+    "credentialUrl": "https://learn.mongodb.com/c/4F7eMoIqRjqx8XiI3lE-eg",
     "imageUrl": ""
   },
   {
     "id": "cert-3",
-    "title": "TensorFlow Developer Certificate",
-    "issuer": "Google",
-    "date": "2024-11",
+    "title": "Google Cloud Career Launchpad – Generative AI Track",
+    "issuer": "Google Cloud Skills Boost",
+    "date": "Oct 2024",
     "credentialUrl": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-4",
+    "title": "Business Analytics Internship",
+    "issuer": "SmartInternz",
+    "date": "Jun 2024",
+    "credentialUrl": "https://skillwallet.smartinternz.com/internships/qlik-vip-certificate/9872ed9fc22fc182d371c3e9ed316094",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-5",
+    "title": "Artificial Intelligence Fundamentals",
+    "issuer": "IBM",
+    "date": "Dec 2023",
+    "credentialUrl": "https://www.credly.com/badges/639b05ed-e306-45ac-aaaa-3f9f63fddb6d/public_url",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-6",
+    "title": "Google Cloud Computing Foundation",
+    "issuer": "GDG On Campus Karunya",
+    "date": "N/A",
+    "credentialUrl": "https://www.skills.google/public_profiles/c122e1cd-49f7-44c3-be18-897d37227561",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-7",
+    "title": "Data Analytics Essentials",
+    "issuer": "Cisco Networking Academy",
+    "date": "Apr 2024",
+    "credentialUrl": "https://www.credly.com/badges/98dd90af-fd89-4af7-bb85-20a042bdfeec/public_url",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-8",
+    "title": "Power BI Training",
+    "issuer": "Infosys Springboard",
+    "date": "Oct 2023",
+    "credentialUrl": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-9",
+    "title": "PCAP: Programming Essentials in Python",
+    "issuer": "Cisco Networking Academy",
+    "date": "N/A",
+    "credentialUrl": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-10",
+    "title": "Version Control",
+    "issuer": "Meta / Coursera",
+    "date": "N/A",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/87ZAT75F8N3M",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-11",
+    "title": "Programming with Python 3.X",
+    "issuer": "Simplilearn",
+    "date": "N/A",
+    "credentialUrl": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-12",
+    "title": "Data Visualization",
+    "issuer": "Kaggle",
+    "date": "Feb 2023",
+    "credentialUrl": "https://www.kaggle.com/learn/certification/bk2005/data-visualization",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-13",
+    "title": "Data Mining",
+    "issuer": "NPTEL",
+    "date": "Apr 2023",
+    "credentialUrl": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "cert-14",
+    "title": "Technical English for Engineers",
+    "issuer": "NPTEL",
+    "date": "Nov 2024",
+    "credentialUrl": "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24HS175S65240203903961861",
     "imageUrl": ""
   }
 ]

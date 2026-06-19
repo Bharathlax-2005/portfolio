@@ -18,7 +18,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({ authenticated: true, email: payload.email });
   } catch (error) {
-    console.error("/api/auth/session error:", error);
-    return res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
+    console.error("[session] unhandled error:", error);
+    return res.status(500).json({
+      error: error instanceof Error ? error.message : String(error),
+    });
   }
 }

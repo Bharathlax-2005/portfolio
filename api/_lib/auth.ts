@@ -1,14 +1,30 @@
-import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+/**
+ * Auth utilities for Vercel serverless functions.
+ *
+ * IMPORTANT: jsonwebtoken and bcryptjs are CommonJS packages.
+ * With `"type": "module"` in package.json, default imports may break
+ * in Vercel's Node.js runtime. We use namespace imports + a `.default`
+ * fallback pattern to guarantee CJS interop in every environment.
+ */
+import * as jwtModule from "jsonwebtoken";
+import * as bcryptModule from "bcryptjs";
+
+// CJS interop: in ESM runtimes the CJS `module.exports` object may appear
+// at `.default` or directly on the namespace – handle both.
+const jwt = (jwtModule as any).default ?? jwtModule;
+const bcrypt = (bcryptModule as any).default ?? bcryptModule;
 
 export const COOKIE_NAME = "admin_session";
 
 export function startupDiagnostics() {
-  console.log({
+  console.log("[auth] startup diagnostics", {
     hasAdminEmail: !!process.env.ADMIN_EMAIL,
     hasPasswordHash: !!process.env.ADMIN_PASSWORD_HASH,
+    passwordHashPrefix: process.env.ADMIN_PASSWORD_HASH?.substring(0, 7) ?? "(unset)",
     hasJwtSecret: !!process.env.JWT_SECRET,
     nodeEnv: process.env.NODE_ENV,
+    jwtType: typeof jwt.sign,
+    bcryptType: typeof bcrypt.compare,
   });
 }
 
@@ -27,19 +43,25 @@ export function validatePasswordHash(hash: string): void {
 
   const bcryptRegex = /^\$2[aby]\$\d{2}\$[./A-Za-z0-9]{53}$/;
   if (!bcryptRegex.test(hash)) {
-    throw new Error("ADMIN_PASSWORD_HASH is not a valid bcrypt hash.");
+    throw new Error(
+      `ADMIN_PASSWORD_HASH is not a valid bcrypt hash. ` +
+      `Received (first 10 chars): "${hash.substring(0, 10)}…"`
+    );
   }
 }
 
 export function signSession(email: string): string {
-  return jwt.sign({ email }, validateSecret(), { expiresIn: "7d" });
+  const secret = validateSecret();
+  console.log("[auth] signSession: jwt.sign type =", typeof jwt.sign);
+  return jwt.sign({ email }, secret, { expiresIn: "7d" });
 }
 
 export function verifySession(token: string): { email: string } | null {
   try {
-    return jwt.verify(token, validateSecret()) as { email: string };
+    const secret = validateSecret();
+    return jwt.verify(token, secret) as { email: string };
   } catch (error) {
-    console.error("verifySession failed:", error);
+    console.error("[auth] verifySession failed:", error);
     return null;
   }
 }
@@ -65,15 +87,28 @@ export function buildSessionCookie(token: string): string {
     "SameSite=Strict",
     `Max-Age=${7 * 24 * 60 * 60}`,
   ];
-  if (process.env.NODE_ENV === "production") parts.push("Secure");
+  if (process.env.NODE_ENV === "production" || process.env.VERCEL) {
+    parts.push("Secure");
+  }
   return parts.join("; ");
 }
 
 export function buildLogoutCookie(): string {
-  return `${COOKIE_NAME}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0`;
+  const parts = [
+    `${COOKIE_NAME}=`,
+    "Path=/",
+    "HttpOnly",
+    "SameSite=Strict",
+    "Max-Age=0",
+  ];
+  if (process.env.NODE_ENV === "production" || process.env.VERCEL) {
+    parts.push("Secure");
+  }
+  return parts.join("; ");
 }
 
 export async function verifyPassword(plain: string, hash: string): Promise<boolean> {
   validatePasswordHash(hash);
+  console.log("[auth] verifyPassword: bcrypt.compare type =", typeof bcrypt.compare);
   return bcrypt.compare(plain, hash);
 }

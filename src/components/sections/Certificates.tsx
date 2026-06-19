@@ -52,6 +52,17 @@ export default function Certificates() {
           </Reveal>
         ))}
       </div>
+      <div className="mt-8 flex justify-center">
+        <a
+          href="https://www.linkedin.com/in/bharath-kumar-bksquare/details/certifications/"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-signal px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-signal/20 hover:bg-signal-dark transition-colors duration-200"
+        >
+          View all certifications on LinkedIn
+          <ExternalLink size={16} className="ml-2" />
+        </a>
+      </div>
     </Section>
   );
 }

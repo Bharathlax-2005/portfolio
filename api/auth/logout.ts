@@ -11,7 +11,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader("Set-Cookie", buildLogoutCookie());
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error("/api/auth/logout error:", error);
-    return res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
+    console.error("[logout] unhandled error:", error);
+    return res.status(500).json({
+      error: error instanceof Error ? error.message : String(error),
+    });
   }
 }

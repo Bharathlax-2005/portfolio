@@ -1,5 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { buildSessionCookie, signSession, validatePasswordHash, verifyPassword, startupDiagnostics } from "../_lib/auth";
+import {
+  buildSessionCookie,
+  signSession,
+  validatePasswordHash,
+  verifyPassword,
+  startupDiagnostics,
+} from "../_lib/auth";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
@@ -20,14 +26,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
 
     if (!adminEmail || !adminPasswordHash) {
+      console.error("[login] Missing env vars:", {
+        hasAdminEmail: !!adminEmail,
+        hasPasswordHash: !!adminPasswordHash,
+      });
       return res.status(500).json({ error: "Admin credentials aren't configured on the server yet." });
     }
 
     try {
       validatePasswordHash(adminPasswordHash);
     } catch (validationError) {
-      console.error("Invalid ADMIN_PASSWORD_HASH:", validationError);
-      return res.status(500).json({ error: validationError instanceof Error ? validationError.message : String(validationError) });
+      console.error("[login] Invalid ADMIN_PASSWORD_HASH:", validationError);
+      return res.status(500).json({
+        error: validationError instanceof Error ? validationError.message : String(validationError),
+      });
     }
 
     if (String(email).toLowerCase() !== adminEmail.toLowerCase()) {
@@ -43,7 +55,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader("Set-Cookie", buildSessionCookie(token));
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error("/api/auth/login error:", error);
-    return res.status(500).json({ error: error instanceof Error ? error.message : String(error) });
+    console.error("[login] unhandled error:", error);
+    return res.status(500).json({
+      error: error instanceof Error ? error.message : String(error),
+    });
   }
 }
